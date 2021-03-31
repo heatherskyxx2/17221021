@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>RTHK x Covid-19</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 50px;
+  text-align: center;
+  background: #000000;
+  color: white;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+    <div class='logo'>
+        <img src="image/rthk_covid.png" width=500px>
+    </div>
+  <h1>Interactive visualization of author sentiments in Covid-19 news.</h1>
+  <p>17221021 Sung Kai Yan</p>
+</div>
+
+<div class="navbar">
+  <a href="index.html">Home</a>
+  <a href="news.html">News</a>
+  <a href="analysis.html">Analysis</a>
+  <a href="search.html" class="right">Search</a>
+</div>
+
+<div class="row">
+  <div class="side">
+    <h2>About RTHK...</h2>
+    <div class="rthk"><img src="image/rthk.png" width=200px></div>
+    <p>Radio Television Hong Kong (RTHK) is the public broadcasting service in Hong Kong established in 1928. Providing radio channels, television channels, also online news website for educational, entertainment and public affairs programmes broadcasting.</p>
+    <h2>About Covid-19...</h2>
+    <div class="covid"><img src="image/covid.png" width=200px></div>
+    <p>Coronavorus disease 2019 (COVID-19) was first identified in Wuhan, China, in December 2019. The virus can cause respiratory illness, unfortunately has since spread worldwide, leading to an ongoing pandemic.</p>
+
+  </div>
+  <div class="main">
+   <iframe src="https://chp-dashboard.geodata.gov.hk/covid-19/web/main2.html?lang=en" title="covid-19 in hk" width="750px" height="500px"></iframe>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>Footer</h2>
+</div>
+
+</body>
+</html>
