@@ -4,6 +4,8 @@
 <title>Sentiments</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+
 <style>
 * {
   box-sizing: border-box;
@@ -123,40 +125,106 @@ body {
   <a href="index.html">Home</a>
   <a href="news.html">News</a>
   <a href="analysis.html">Analysis</a>
-  <a href="search.html" class="right">Search</a>
+  <a href="search.html">Search</a>
 </div>
 
 <div class="row">
   <div class="main">
-    <h2>What did the news said?</h2>
+    <div class="box">
+      <h2 class="title is-4">What did the news said?</h2>
       <img src="image/wordcloud.png" width="500px">
     <p>Wordcloud of news dataset(titles), could represent each term's importance and frequency, the bigger words means greater weight.</p>
     <p>The following will explain several essential wordings in the dataset.</p>
-    <ul>
+   
       <li>Covid: Main theme of the dataset.</li>
       <li>Lockdown: Frequent ambushed lockdowns in residential areas for compulsory virus test adopted in Hong Kong; Lockdowns in different countries or cities (e.g. sealing boarder, suspend classes and works) to prevent virus spread.</li>
       <li>China: Covid-19 cases in China; WHO invetigates virus origin in China; How China helps other countries to control virus spread.</li>
       <li>Vaccine: Invention and testing of covid-19 vaccines; Vaccination situation in different countries or cities.</li>
       <li>Govt: Short term of Government; How different country's government handle the pandemic.</li>
       <li>Test: Situation of compulsory virus test in Hong Kong for specific industries or lockdown areas.</li>
-    </ul>
+    
+    </div>
+    
 
-    <h2>Categories distribution</h2>
-    <img src="image/category.png" width="500px">
-    <p>There are total 5 categories in RTHK's news classification.</p>
-    <p>In the extracted dataset of total 315 news, the distribution is in the following:</p>
-    <li>Local: 155 (49%)</li>
-    <li>World News: 64 (20%)</li>
-    <li>Greater China: 42 (13%)</li>
-    <li>Finance: 31 (10%)</li>
-    <li>Sport: 23 (7%)</li>
+    <div class="box">
+      <h2 class="title is-4">Categories distribution</h2>
+      <img src="image/category.png" width="500px">
+      <p>There are total 5 categories in RTHK's news classification.</p>
+      <p>In the extracted dataset of total 315 news, the distribution is in the following:</p>
+      <li>Local: 155 (49%)</li>
+      <li>World News: 64 (20%)</li>
+      <li>Greater China: 42 (13%)</li>
+      <li>Finance: 31 (10%)</li>
+      <li>Sport: 23 (7%)</li>
+    </div>
+      
+    
+    <div class="box">
+      <h2 class="title is-4">Sentiments</h2>
 
-    <h2>Sentiments</h2>
-    <h3>Polarity</h3>
+    <h3 class="title is-5">Polarity</h3>
     <img src="image/polarity.png" width="500px">
-    <h3>Subjectivity</h3>
-    <img src="image/subjectivity.png" width="500px">
+    <p>Polarity of the news, represents the emotional sentiment of the data, ranging from -1 to 1 (most negative to most positive.)</p>
+    <p>The figure shows that the range of the polarity is from -0.13 to 0.29, which is a relatively narrow range. This showed most of the news were delivering informative content, but not strong personal emotion.</p>
+    <p>The upper figure showed the distribution of polarity, below are some details.</p>
+    <table class="table is-bordered">
+      <tr>
+        <th>Mean</th>
+        <td>0.070678</td>
+      </tr>
+      <tr>
+        <th>Minimum</th>
+        <td>-0.135417</td>
+      </tr><tr>
+        <th>Lower Quartile(25%)</th>
+        <td>0.022463</td>
+      </tr>
+      <tr>
+        <th>Median(50%)</th>
+        <td>0.074401</td>
+      </tr>
+      <tr>
+        <th>Upper Quartile(75%)</th>
+        <td>0.121133</td>
+      </tr>
+      <tr>
+        <th>Maximum</th>
+        <td>0.291667</td>
+      </tr>
+    </table>
 
+    <h3 class="title is-5">Subjectivity</h3>
+    <img src="image/subjectivity.png" width="500px">
+    <p>Subjectivity of the news can determine whether it is objective or not, ranging from 0 to 1 (most objective to most subjective). </p>
+    <p>The mean and median showed the subjectiveness of the news. The maximum value is 0.63, showed there are no extreme subjective news that expressing personal opinion.</p>
+    <p>The upper figure showed the distribution of subjectivity, below are some details.</p>
+    <table class="table is-bordered">
+      <tr>
+        <th>Mean</th>
+        <td>0.396223</td>
+      </tr>
+      <tr>
+        <th>Minimum</th>
+        <td>0.079968</td>
+      </tr><tr>
+        <th>Lower Quartile(25%)</th>
+        <td>0.347432</td>
+      </tr>
+      <tr>
+        <th>Median(50%)</th>
+        <td>0.400616</td>
+      </tr>
+      <tr>
+        <th>Upper Quartile(75%)</th>
+        <td>0.440435</td>
+      </tr>
+      <tr>
+        <th>Maximum</th>
+        <td>0.628333</td>
+      </tr>
+    </table>
+    </div>
+    
   </div>
 </div>
 
