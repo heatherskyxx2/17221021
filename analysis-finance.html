@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sentiments - Finance</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Style the body */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+        }
+
+        /* Header/logo Title */
+        .header {
+            padding: 50px;
+            text-align: center;
+            background: #000000;
+            color: white;
+        }
+
+        /* Increase the font size of the heading */
+        .header h1 {
+            font-size: 40px;
+        }
+
+        /* Style the top navigation bar */
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        /* Style the navigation bar links */
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        /* Right-aligned link */
+        .navbar a.right {
+            float: right;
+        }
+
+        /* Change color on hover */
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Column container */
+        .row {
+            display: -ms-flexbox;
+            /* IE10 */
+            display: flex;
+            -ms-flex-wrap: wrap;
+            /* IE10 */
+            flex-wrap: wrap;
+        }
+
+        /* Create two unequal columns that sits next to each other */
+        /* Sidebar/left column */
+        .side {
+            -ms-flex: 30%;
+            /* IE10 */
+            flex: 30%;
+            background-color: #f1f1f1;
+            padding: 20px;
+        }
+
+        /* Main column */
+        .main {
+            -ms-flex: 70%;
+            /* IE10 */
+            flex: 70%;
+            background-color: white;
+            padding: 20px;
+        }
+
+        /* Fake image, just for this example */
+        .fakeimg {
+            background-color: #aaa;
+            width: 100%;
+            padding: 20px;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background: #ddd;
+        }
+
+        /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 700px) {
+            .row {
+                flex-direction: column;
+            }
+        }
+
+        /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+        @media screen and (max-width: 400px) {
+            .navbar a {
+                float: none;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <div class='logo'>
+            <img src="image/rthk_covid.png" width=500px>
+        </div>
+        <h1>Analysis</h1>
+    </div>
+
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="news.html">News</a>
+        <a href="analysis.html">Analysis</a>
+        <a href="search.html">Search</a>
+    </div>
+
+    <div class="row">
+        <div class="main">
+            <div class="tabs is-boxed">
+                <ul>
+                    <li><a href="analysis.html">All</a></li>
+                    <li><a href="analysis-local.html">Local</a></li>
+                    <li><a href="analysis-world.html">World News</a></li>
+                    <li><a href="analysis-china.html">Greater China</a></li>
+                    <li class="is-active"><a href="analysis-finance.html">Finance</a></li>
+                    <li><a href="analysis-sport.html">Sport</a></li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h2 class="title is-4">Sentiments</h2>
+                <p>There are a total of 31 finance news.</p>
+                <br>
+
+                <h3 class="title is-5">Polarity</h3>
+                <img src="image/pol_finance.png" width="700px">
+                <p>Polarity of the news, represents the emotional sentiment of the data, ranging from -1 to 1 (most
+                    negative to
+                    most positive.)</p>
+                <p>The figure shows that the range of the polarity is from -0.053 to 0.226, which is a relatively narrow
+                    range. The mean and median are similar so there are no extreme polarity. 
+                    This showed most of the news in finance category were delivering informative content, but not strong
+                    personal emotion.</p>
+                <p>The upper figure showed the distribution of polarity, below are some details (corrected to 3 decimal
+                    places).</p>
+                <table class="table is-bordered">
+                    <tr>
+                        <th>Mean</th>
+                        <td>0.097</td>
+                    </tr>
+                    <tr>
+                        <th>Minimum</th>
+                        <td>-0.053</td>
+                    </tr>
+                    <tr>
+                        <th>Lower Quartile(25%)</th>
+                        <td>0.051</td>
+                    </tr>
+                    <tr>
+                        <th>Median(50%)</th>
+                        <td>0.103</td>
+                    </tr>
+                    <tr>
+                        <th>Upper Quartile(75%)</th>
+                        <td>0.155</td>
+                    </tr>
+                    <tr>
+                        <th>Maximum</th>
+                        <td>0.226</td>
+                    </tr>
+                </table>
+                <p>For more information in each category, please access through the tabs on <a href="analysis.html">page
+                        top</a>.</p>
+                <br>
+
+
+                <h3 class="title is-5">Subjectivity</h3>
+                <img src="image/sub_finance.png" width="700px">
+                <p>Subjectivity of the news can determine whether it is objective or not, ranging from 0 to 1 (most
+                    objective to
+                    most subjective). </p>
+                <p>The mean and median were similar, showed there are no extreme subjectiveness of the news. The maximum
+                    value is 0.513, showed there are no
+                    extreme subjective news in finance category that expressing personal opinion.</p>
+                <p>The upper figure showed the distribution of subjectivity, below are some details (corrected to 3
+                    decimal places).</p>
+                <table class="table is-bordered">
+                    <tr>
+                        <th>Mean</th>
+                        <td>0.382</td>
+                    </tr>
+                    <tr>
+                        <th>Minimum</th>
+                        <td>0.212</td>
+                    </tr>
+                    <tr>
+                        <th>Lower Quartile(25%)</th>
+                        <td>0.345</td>
+                    </tr>
+                    <tr>
+                        <th>Median(50%)</th>
+                        <td>0.382</td>
+                    </tr>
+                    <tr>
+                        <th>Upper Quartile(75%)</th>
+                        <td>0.431</td>
+                    </tr>
+                    <tr>
+                        <th>Maximum</th>
+                        <td>0.513</td>
+                    </tr>
+                </table>
+                <p>For more information in each category, please access through the tabs on <a href="analysis.html">page
+                        top</a>.</p>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer">
+        <h2>Hong Kong Baptist University, Computer Science,Final Year Project, 2020-21.</h2>
+    </div>
+
+</body>
+
+</html>
